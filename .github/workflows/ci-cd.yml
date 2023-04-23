@@ -35,7 +35,8 @@ jobs:
       - name: Audit dependencies (requires Yarn 3+)
         run: yarn npm audit
 
-      - name: Run tests
-        run: yarn test
+      # No tests currently, uncomment this when we start building unit tests
+      # - name: Run tests
+      #   run: yarn test
 
     # Additional steps like building, deploying, or publishing can be added here.
