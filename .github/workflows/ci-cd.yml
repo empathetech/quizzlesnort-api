@@ -23,7 +23,8 @@ jobs:
 
       - name: Set up latest Yarn PnP
         run: |
-          curl -sS https://install.yarnpkg.com/latest.tar.gz | tar xz -C .yarn --strip-components=1
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
           echo "nodeLinker: pnp" >> .yarnrc.yml
           echo "$(yarn bin)" >> $GITHUB_PATH
           echo "$(yarn bin)/../lib/cli" >> $GITHUB_PATH
