@@ -1,0 +1,40 @@
+name: Quizzlesnort API CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 19
+
+      - name: Set up latest Yarn PnP
+        run: |
+          curl -sS https://install.yarnpkg.com/latest.tar.gz | tar xz -C .yarn --strip-components=1
+          echo "nodeLinker: pnp" >> .yarnrc.yml
+          echo "$(yarn bin)" >> $GITHUB_PATH
+          echo "$(yarn bin)/../lib/cli" >> $GITHUB_PATH
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Audit dependencies (requires Yarn 3+)
+        run: yarn npm audit
+
+      - name: Run tests
+        run: yarn test
+
+    # Additional steps like building, deploying, or publishing can be added here.

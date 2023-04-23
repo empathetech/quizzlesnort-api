@@ -1,0 +1,7 @@
+{
+  "name": "quizzlesnort-api",
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
