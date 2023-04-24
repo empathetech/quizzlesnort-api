@@ -1,10 +1,24 @@
-# quizzlesnort-api
+# Quizzlesnort API
 
-An API for a community flash card app that was solely named to entice one engineer to contribute code.
+A Typescript API created and maintained by Empathetech, a community of non-traditional software engineers who are here to support each other's technical and professional development as we each progress in our tech careers. It's built with Node, Express, Knex, and Objection that interacts with a PostgreSQL database storing interview questions both curated from humans and generated through ChatGPT.
+
+This open-source API powers a community-maintained flash card app to help engineers prep for Stack, Terminology, and Concept Interviews, one of six subject matter domains Empathetech has identified as important for interviewing software engineers. As with all Empathetech tools and projects, this API will always be free and open source, and we hope that engineers will not only build their skills through using this API, but developing on it as well!
+
+**Fun fact**: We decided on this specific name to entice one engineer to contribute code. Guess who it is!
 
 ## Setup
 
-### Yarn Plug'n'Play (PnP)
+### Step 1: Install packages via yarn
+
+`yarn`
+
+or
+
+`yarn install`
+
+Do not use your silly `npm` to add packages! I'm looking at YOU!
+
+### Step 1.5: Grokk Yarn Plug'n'Play (PnP)
 
 (Feel free to skip if you've worked on a Yarn PnP codebase before)
 
@@ -39,8 +53,23 @@ However, you should add `.yarn/unplugged` and `.yarn/build-state.yml` to your `.
 
 In summary, committing the `.yarn` folder to your version control system helps ensure a consistent development environment for all team members and can prevent issues related to dependency version mismatches.
 
+**Arrgh! My VS Code/VIM/Emacs is blowing up because there are no `node_modules/`!!!**
+No worries! Take a breath and read through this: https://yarnpkg.com/getting-started/editor-sdks. There are step-by-step instructions to get these IDEs to recognize the plug-and-play nature of PnP in `.yarn/`.
+
 **What if I'm unsure that the changes made to `.yarn/` are in fact safe?**
 
 1. **Always rely on strict code review!**
 2. **Run `yarn npm audit` (Yarn 3+) to double-check your dependencies!**
 3. **Maintain our CI/CD pipelines!**
+
+### Running the things!
+
+Spin up a localhost on port 3000:
+
+```
+yarn dev
+```
+
+### Testing
+
+I swear this is coming!
