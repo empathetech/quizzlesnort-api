@@ -62,7 +62,7 @@ No worries! Take a breath and read through this: https://yarnpkg.com/getting-sta
 2. **Run `yarn npm audit` (Yarn 3+) to double-check your dependencies!**
 3. **Maintain our CI/CD pipelines!**
 
-### Running the things!
+### Step 2: Running the things!
 
 Spin up a localhost on port 3000:
 
@@ -70,6 +70,6 @@ Spin up a localhost on port 3000:
 yarn dev
 ```
 
-### Testing
+### Step 3: Testing
 
 I swear this is coming!
