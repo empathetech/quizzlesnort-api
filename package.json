@@ -2,10 +2,10 @@
   "name": "quizzlesnort-api",
   "packageManager": "yarn@3.5.0",
   "scripts": {
-    "dev": "ts-node-dev ./src/index.ts",
+    "dev": "ts-node-dev ./src/server.ts",
     "start": "ts-node src/server.ts",
     "build": "tsc",
-    "server": "node dist/index.js",
+    "server": "node dist/server.js",
     "test": "jest --testTimeout=10000",
     "migrate:make": "knex migrate:make --knexfile knexfile.ts -x ts",
     "migrate:latest": "knex migrate:latest --knexfile knexfile.ts",
