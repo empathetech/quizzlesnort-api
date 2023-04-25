@@ -20,5 +20,5 @@ describe('Server test', () => {
     expect(res.status).toEqual(200);
     expect(res.type).toEqual(expect.stringContaining('json'));
   });
-
+  
 });
