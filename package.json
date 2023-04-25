@@ -3,7 +3,7 @@
   "packageManager": "yarn@3.5.0",
   "scripts": {
     "dev": "ts-node-dev ./src/index.ts",
-    "start": "ts-node src/index.ts",
+    "start": "ts-node src/server.ts",
     "build": "tsc",
     "server": "node dist/index.js",
     "test": "jest --testTimeout=10000",
